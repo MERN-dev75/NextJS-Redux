@@ -1,5 +1,5 @@
 import "./globals.css"; // Import global CSS styles
-import { ReduxProvider } from "../Component/Provider"; // Import the Redux provider component
+import { ReduxProvider } from "../Redux/Provider"; // Import the Redux provider component
 import { geistMono, geistSans } from "../styles/fonts.js"; // Import custom font styles
 
 // Metadata for the layout, used by Next.js for SEO

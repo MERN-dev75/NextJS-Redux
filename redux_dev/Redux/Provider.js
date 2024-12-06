@@ -1,7 +1,7 @@
 'use client'; // Required for client components in Next.js (enables client-side rendering)
 
 import { Provider } from 'react-redux'; // Import Provider to make Redux store accessible throughout the component tree
-import store from '../Redux/store'; // Import the Redux store configuration
+import store from './store'; // Import the Redux store configuration
 
 // ReduxProvider component to wrap the application with the Redux store
 export function ReduxProvider({ children }) {
