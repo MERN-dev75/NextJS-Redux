@@ -14,7 +14,7 @@ export default function Home() {
       
       {/* Heading section */}
       <div className={styles.Heading}>
-        Redux Data Flow
+        Redux Global State Management
       </div>
       
       {/* Event section that groups the individual functional blocks */}
