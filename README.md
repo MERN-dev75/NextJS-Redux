@@ -54,11 +54,11 @@ Before you begin, ensure you have the following installed:
 
 ## Home Component
 
-   The main page (page.js) serves as the application’s entry point and organizes the following blocks:
+The main page (page.js) serves as the application’s entry point and organizes the following blocks:
 
-       * ButtonBlock: For adding items to the data list.
-       * CountBlock: Displays the total count of items added.
-       * ListingBlock: Shows all added items with delete functionality.
+  1. ButtonBlock: For adding items to the data list.
+  2. CountBlock: Displays the total count of items added.
+  3. ListingBlock: Shows all added items with delete functionality.
 
 ## ButtonBlock
 
