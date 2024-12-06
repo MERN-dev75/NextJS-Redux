@@ -26,7 +26,7 @@ Before you begin, ensure you have the following installed:
 ## Setup and Installation
 
     * git clone https://github.com/MERN-dev75/NextJS-Redux.git
-    * cd redux-data-flow-app
+    * cd NextJS-Redux
     * npm install
     * npm run dev
     * Open the application in your browser at http://localhost:3000.
