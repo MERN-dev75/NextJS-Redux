@@ -59,3 +59,18 @@ Before you begin, ensure you have the following installed:
        * ButtonBlock: For adding items to the data list.
        * CountBlock: Displays the total count of items added.
        * ListingBlock: Shows all added items with delete functionality.
+
+## ButtonBlock
+
+* Path: /components/ButtonBlock/ButtonGroup.jsx
+* Purpose: Handles user input and adds new items to the Redux store.
+
+## CountBlock
+
+* Path: /components/CountBlock/CountSection.jsx
+* Purpose: Uses Redux selectors to display the current count of items.
+
+## ListingBlock
+
+* Path: /components/ListingBlock/Listing.jsx
+* Purpose: Dynamically displays a scrollable list of data fetched from the Redux store. Includes a delete button for each item.
