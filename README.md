@@ -30,3 +30,21 @@ Before you begin, ensure you have the following installed:
     * npm install
     * npm run dev
     * Open the application in your browser at http://localhost:3000.
+
+## Folder Structure
+
+    /app
+  ├── /layout.js            # App-wide layout and meta configuration
+  ├── /page.js              # Main entry point for the application
+  ├── /components           # Reusable UI components
+  │     ├── ButtonBlock
+  │     │     └── ButtonGroup.jsx  # Handles input for adding data
+  │     ├── CountBlock
+  │     │     └── CountSection.jsx # Displays the count of data entries
+  │     ├── ListingBlock
+  │           └── Listing.jsx      # Renders the list of data entries
+  ├── /store                # Redux state management
+  │     ├── store.js        # Redux store configuration
+  │     └── itemSlice.js    # Redux slice for item management
+  ├── /styles               # Scoped styles for components
+  │     └── page.module.css # Styling for the main page
