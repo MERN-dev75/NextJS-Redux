@@ -34,26 +34,26 @@ Before you begin, ensure you have the following installed:
 ## Folder Structure
 
     /app
-      |── /layout.js                      # App-wide layout and meta configuration
-      |── /page.js                        # Main entry point for the application
+      |──  layout.js                      # App-wide layout and meta configuration
+      |──  page.js                        # Main entry point for the application
       |──  page.module.css                # Styling for the main page
       |──  globals.css
       |──  /api
       |
-    components                            # Reusable UI components
-      |── ButtonBlock
+    /components                           # Reusable UI components
+      |── /ButtonBlock
       │     └── ButtonGroup.jsx           # Handles input for adding data
       |     └── ButtonGroup.module.scss   # Styling for ButtonBlock\
       |
-      |── CountBlock
+      |── /CountBlock
       │     └── CountSection.jsx          # Displays the count of data entries
       |     └── CountSection.module.scss  # Styling for CountBlock
       |
-      |── ListingBlock
+      |── /ListingBlock
       |     └── Listing.jsx               # Renders the list of data entries
       |     └── Listing.module.scss       # Styling for ListingBlock
       |
-    Redux                                 # Redux state management
+    /Redux                                # Redux state management
       ├── store.js                        # Redux store configuration
       ├── rootReducer.js                  # Combined root reducer for the entire app state
       ├── Provider.js                     # Redux Provider wrapper for the app
@@ -62,7 +62,7 @@ Before you begin, ensure you have the following installed:
       │     └── action.js                 # Action creators for content management
       │     └── actionType.js             # Constants for action types
       |
-    styles                                # Scoped styles for components
+    /styles                               # Scoped styles for components
       └── fonts.js                        # Local fonts for the all page
 
 ## Components Overview
