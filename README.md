@@ -33,12 +33,13 @@ Before you begin, ensure you have the following installed:
 
 ## Folder Structure
 
-      /app
+    /app
     ├── /layout.js            # App-wide layout and meta configuration
     ├── /page.js              # Main entry point for the application
     ├── /components           # Reusable UI components
     │     ├── ButtonBlock
     │     │     └── ButtonGroup.jsx  # Handles input for adding data
+    |     |     |__ ButtonGroup.module.scss
     │     ├── CountBlock
     │     │     └── CountSection.jsx # Displays the count of data entries
     │     ├── ListingBlock
@@ -48,3 +49,13 @@ Before you begin, ensure you have the following installed:
     │     └── itemSlice.js    # Redux slice for item management
     ├── /styles               # Scoped styles for components
     │     └── page.module.css # Styling for the main page
+
+## Components Overview
+
+## Home Component
+
+   The main page (page.js) serves as the application’s entry point and organizes the following blocks:
+
+       * ButtonBlock: For adding items to the data list.
+       * CountBlock: Displays the total count of items added.
+       * ListingBlock: Shows all added items with delete functionality.
