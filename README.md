@@ -34,21 +34,26 @@ Before you begin, ensure you have the following installed:
 ## Folder Structure
 
     /app
-    ├── /layout.js            # App-wide layout and meta configuration
-    ├── /page.js              # Main entry point for the application
-    ├── /components           # Reusable UI components
-    │     ├── ButtonBlock
-    │     │     └── ButtonGroup.jsx  # Handles input for adding data
-    |     |     |__ ButtonGroup.module.scss
-    │     ├── CountBlock
-    │     │     └── CountSection.jsx # Displays the count of data entries
-    │     ├── ListingBlock
-    │           └── Listing.jsx      # Renders the list of data entries
-    ├── /store                # Redux state management
-    │     ├── store.js        # Redux store configuration
-    │     └── itemSlice.js    # Redux slice for item management
-    ├── /styles               # Scoped styles for components
-    │     └── page.module.css # Styling for the main page
+      ├── /layout.js            # App-wide layout and meta configuration
+      ├── /page.js              # Main entry point for the application
+      |──  page.module.css      # Styling for the main page
+      |__  globals.css
+      |__  /api
+    components           # Reusable UI components
+      ├── ButtonBlock
+      │     └── ButtonGroup.jsx  # Handles input for adding data
+      |     |__ ButtonGroup.module.scss # Styling for ButtonBlock
+      ├── CountBlock
+      │     └── CountSection.jsx # Displays the count of data entries
+      |     |__ CountSection.module.scss # Styling for CountBlock
+      ├── ListingBlock
+      |     └── Listing.jsx      # Renders the list of data entries
+      |      └── Listing.module.scss # Styling for ListingBlock
+    Redux                # Redux state management
+      ├── store.js        # Redux store configuration
+      └── itemSlice.js    # Redux slice for item management
+    styles               # Scoped styles for components
+      └── fonts.js # Local fonts for the all page
 
 ## Components Overview
 
