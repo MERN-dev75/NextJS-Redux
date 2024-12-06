@@ -15,3 +15,18 @@ This project demonstrates a Redux-powered data management application built with
    * Next.js for a performant, SEO-friendly frontend.
    * Redux Toolkit for simplified state management.
    * CSS Modules for scoped, reusable styles.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+     * Node.js v18+
+     * npm or yarn
+
+## Setup and Installation
+
+    * git clone https://github.com/your-username/redux-data-flow-app.git
+    * cd redux-data-flow-app
+    * npm install
+    * npm run dev
+    * Open the application in your browser at http://localhost:3000.
