@@ -1,30 +1,32 @@
-import { applyMiddleware, compose, createStore } from "redux";
-import thunk from "redux-thunk";
-import axios from "axios";
-import reducer from "./rootReducer";
 import { configureStore } from '@reduxjs/toolkit';
+import axios from 'axios';
+import reducer from './rootReducer'; // Root reducer to manage application state
 
+// Create a custom Axios instance for making API requests
 export const axiosInstance = axios.create({
-    baseURL: `${process.env.NEXT_PUBLIC_BASE_URL}/auth/`,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  baseURL: `http://localhost:3000/`, // Base URL for all API calls
+  headers: {
+    "Content-Type": "application/json", // Ensures requests are sent with JSON data
+  },
+});
 
-  const store = configureStore({
-    reducer: reducer,
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        thunk: {
-          extraArgument: axiosInstance,
-        },
-      }),
-    devTools: process.env.NODE_ENV !== 'production', // Enable DevTools only in development mode
-  });
+// Configure the Redux store
+const store = configureStore({
+  // Register the root reducer
+  reducer,
 
-  // const enhancers = compose(
-  //   composeWithDevTools(applyMiddleware(thunk.withExtraArgument(axiosInstance)))
-  // );
-  // let store = createStore(reducer, enhancers);
+  // Customize middleware
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      thunk: {
+        // Pass the Axios instance as an extra argument to thunks
+        extraArgument: axiosInstance,
+      },
+    }),
 
-  export default store;
+  // Enable Redux DevTools in non-production environments
+  devTools: process.env.NODE_ENV !== 'production',
+});
+
+export default store;
+

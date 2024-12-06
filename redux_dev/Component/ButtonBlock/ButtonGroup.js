@@ -1,32 +1,37 @@
-"use client"
+"use client"; // Indicates this is a client-side component in Next.js
 
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import styles from "./ButtonGroup.module.scss"; // Import the SCSS module
-import { addContent } from "../../Redux/Content/action";
+import { useState } from "react"; // React hook for managing component state
+import { useDispatch } from "react-redux"; // Hook to dispatch actions to the Redux store
+import styles from "./ButtonGroup.module.scss"; // Import SCSS module for styling
+import { addContent } from "../../Redux/Content/action"; // Redux action to add content
 
 const ButtomBlockUI = () => {
-  const dispatch = useDispatch();
-  const [inputValue, setInputValue] = useState("");
+  const dispatch = useDispatch(); // Hook to dispatch actions
+  const [inputValue, setInputValue] = useState(""); // State to manage the input field value
 
+  // Function to add an item to the Redux store
   const addItem = () => {
+    // Check if the input is not empty or just spaces
     if (inputValue.trim() !== "") {
-      dispatch(addContent(inputValue))
-      setInputValue("");
+      dispatch(addContent(inputValue)); // Dispatch the `addContent` action with the input value
+      setInputValue(""); // Clear the input field after adding the item
     }
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.bottomLock}>
+    <div className={styles.container}> {/* Main container */}
+      <div className={styles.bottomLock}> {/* Inner container for the input and button */}
         <input
-          type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Enter item"
-          className={styles.input}
+          type="text" // Input field for entering new items
+          value={inputValue} // Controlled input bound to `inputValue`
+          onChange={(e) => setInputValue(e.target.value)} // Update state on user input
+          placeholder="Enter item" // Placeholder text for the input field
+          className={styles.input} // Styling for the input field
         />
-        <button className={styles.addButton} onClick={addItem}>
+        <button
+          className={styles.addButton} // Styled add button
+          onClick={addItem} // Call `addItem` when the button is clicked
+        >
           Add Item
         </button>
       </div>
@@ -34,4 +39,4 @@ const ButtomBlockUI = () => {
   );
 };
 
-export default ButtomBlockUI;
+export default ButtomBlockUI; // Export the component
