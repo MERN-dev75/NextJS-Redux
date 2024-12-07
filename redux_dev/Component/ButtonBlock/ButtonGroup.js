@@ -3,7 +3,7 @@
 import { useState } from "react"; // React hook for managing component state
 import { useDispatch } from "react-redux"; // Hook to dispatch actions to the Redux store
 import styles from "./ButtonGroup.module.scss"; // Import SCSS module for styling
-import { addContent } from "../../Redux/Content/action"; // Redux action to add content
+import { addContent, GetDataFromAPI } from "../../Redux/Content/action"; // Redux action to add content
 
 const ButtomBlockUI = () => {
   const dispatch = useDispatch(); // Hook to dispatch actions
@@ -17,6 +17,10 @@ const ButtomBlockUI = () => {
       setInputValue(""); // Clear the input field after adding the item
     }
   };
+
+  const callAPI = () => {
+    dispatch(GetDataFromAPI());
+  }
 
   return (
     <div className={styles.container}> {/* Main container */}
@@ -33,6 +37,14 @@ const ButtomBlockUI = () => {
           onClick={addItem} // Call `addItem` when the button is clicked
         >
           Add Item
+        </button>
+      </div>
+      <div className={styles.bottomLock}> {/* Inner container for the input and button */}
+        <button
+          className={styles.addButton} // Styled add button
+          onClick={callAPI} // Call `addItem` when the button is clicked
+        >
+          Add Item From API
         </button>
       </div>
     </div>

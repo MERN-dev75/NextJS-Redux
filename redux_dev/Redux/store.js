@@ -4,7 +4,7 @@ import reducer from './rootReducer'; // Root reducer to manage application state
 
 // Create a custom Axios instance for making API requests
 export const axiosInstance = axios.create({
-  baseURL: `http://localhost:3000/`, // Base URL for all API calls
+  baseURL: `/`, // Base URL for all API calls
   headers: {
     "Content-Type": "application/json", // Ensures requests are sent with JSON data
   },

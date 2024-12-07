@@ -24,6 +24,14 @@ export function updateContent(state = initialState, action) {
       };
     }
 
+    case types.API_DATA: {
+      console.log("zzzzzzzasdasd" , action)
+      return {
+        ...state, // Spread existing state
+        data: action.payload, // Update the `data` array with the payload
+      };
+    }
+
     // Return the current state for any unknown action types
     default:
       return state;
